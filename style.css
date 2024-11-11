@@ -1,0 +1,303 @@
+*{
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link:hover{
+    color: #0983B6 !important;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    position: absolute; 
+  }
+  
+  .nav-item .dropdown-menu {
+    display: none;
+  }
+
+/* Mengatur agar gambar mengisi kontainer */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Memastikan gambar mengisi seluruh ruang dan tetap menjaga aspek rasio */
+img.img-fill-crop {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsif: Ketika layar lebih kecil dari 768px (misalnya smartphone) */
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 15px; /* Menambahkan sedikit margin di bawah card */
+    }
+
+    .col-md-4 {
+        width: 100%; /* Gambar menjadi 100% lebar */
+        height: 250px; /* Menentukan tinggi gambar */
+    }
+
+    .col-md-8 {
+        width: 100%; /* Bagian konten card menjadi 100% lebar */
+    }
+
+    .card-body {
+        padding: 1rem; /* Mengurangi padding dalam card untuk tampilan lebih ringkas */
+    }
+
+    .text-secondary {
+        font-size: 0.875rem; /* Mengurangi ukuran teks di layar kecil */
+    }
+
+    /* Membuat gambar lebih kecil dan proporsional jika di layar kecil */
+    img.img-fill-crop {
+        height: auto; /* Menjaga aspek rasio gambar */
+        max-height: 100%; /* Tidak melebihi tinggi kontainer */
+    }
+}
+
+/* Responsif: Ketika layar lebih besar dari 768px */
+@media (min-width: 768px) {
+    .col-md-4 {
+        width: 40%; /* Gambar akan mengisi sekitar 40% dari lebar card pada layar lebih besar */
+        height: 100%; /* Gambar tetap mengisi seluruh tinggi */
+    }
+
+    .col-md-8 {
+        width: 60%; /* Konten text mengambil sisa 60% */
+    }
+}
+
+.form-input{
+    border: none;
+    border-bottom: .5px solid gray;
+}
+
+.form-input:focus {
+    outline: none;
+    border-bottom: .5px solid #0983B6;
+}
+
+.nameSection h1{
+    letter-spacing: 30px;
+}
+/* Custom Grid Spacing */
+.custom-grid {
+    gap: 20px; /* Space between items */
+  }
+  
+  /* Desktop View */
+  @media (min-width: 768px) {
+    /* Align the first two images in the first row side-by-side */
+    .custom-grid .col-md-6 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    /* Center the third item on the second row */
+    .custom-grid .col-12 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+  }
+  
+  /* Adjust image size and layout for better responsiveness */
+  .custom-grid img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Optional: Center the third image and make it slightly smaller on large screens */
+  @media (min-width: 992px) {
+    .custom-grid .col-12 img {
+      max-width: 80%; /* Slightly smaller for centering effect */
+    }
+  }
+
+  .privacy-settings:hover{
+    color: #0983B6 !important;
+  }
+
+  #searchLink:hover{
+    color: #0983B6 !important;
+  }
+
+  .search-input {
+    border: none; /* Remove all borders */
+    border-bottom: 2px solid #000; /* Add a bottom border */
+    border-radius: 0; /* Remove any border-radius */
+    outline: none; /* Remove the blue outline on focus */
+    box-shadow: none; /* Remove the shadow effect */
+  }
+
+
+  .login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent black */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    display: none; /* Hidden by default, can be shown with JS */
+}
+
+/* Pop-up Styling */
+.loginPop {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2em;
+    width: 100%;
+    max-width: 600px; /* Max width for the pop-up */
+    max-height: 80vh; /* Max height 80% of the viewport height */
+    overflow-y: auto; /* Allow scrolling if the content exceeds max-height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: Arial, sans-serif;
+    display: none;
+    flex-direction: column;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Form styling */
+.formLogin form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.checkBox {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.checkBox1, .checkBox2 {
+    display: flex;
+    align-items: center;
+}
+
+.checkBox input[type="radio"] {
+    margin-right: 10px;
+}
+
+.inputId, .email, .password, .message {
+    margin-bottom: 20px;
+}
+
+.inputId input, .email input, .password input, .message input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem; /* Default font size */
+}
+
+.btn {
+    background-color: #0983B6;
+    color: white;
+    padding: 12px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Font Responsiveness */
+h1 {
+    font-size: 2.5vw; /* Font size based on viewport width */
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.fw-medium, .fs-4 {
+    font-size: 1.2em;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .loginPop {
+        padding: 1.5em;
+        width: 90%;
+        max-width: 90%; /* Make pop-up smaller on mobile */
+    }
+
+    h1 {
+        font-size: 6vw; /* Smaller font for heading on mobile */
+    }
+
+    .fw-medium, .fs-4 {
+        font-size: 1.1em; /* Adjust text size */
+    }
+
+    .inputId input, .email input, .password input, .message input {
+        font-size: 0.9em; /* Smaller text input on mobile */
+        padding: 8px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 1.1em;
+    }
+
+    /* Radio button layout for mobile */
+    .checkBox {
+        border: solid red;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column; /* Change to column on small screens */
+        gap: 10px; /* Reduced gap for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 7vw; /* Even smaller heading font on very small screens */
+    }
+
+    .fw-medium, .fs-4 {
+        font-size: 1em;
+    }
+
+    .inputId input, .email input, .password input, .message input {
+        font-size: 0.9em;
+        padding: 7px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 1.1em;
+    }
+
+    /* Radio button layout for very small screens */
+    .checkBox {
+        flex-direction: column; /* Stack vertically on very small screens */
+    }
+}
+
+#subscribe:hover{
+    color: #0983B6 !important;
+}
